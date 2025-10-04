@@ -3,6 +3,11 @@ class DataManager {
     this.initializeData();
   }
 
+  users = [];
+  mission = [];
+  disputes = [];
+  sales = [];
+
   initializeData() {
     if (!localStorage.getItem("swift_users")) {
       this.createDefaultUsers();
@@ -22,7 +27,7 @@ class DataManager {
   }
 
   createDefaultUsers() {
-    const users = [
+    this.users = [
       {
         id: 1,
         email: "gerente@swift.com",
@@ -55,7 +60,7 @@ class DataManager {
   }
 
   createDefaultMissions() {
-    const missions = [
+    this.missions = [
       {
         id: 1,
         title: "Limpar a Loja",
@@ -106,7 +111,7 @@ class DataManager {
   }
 
   createDefaultDisputes() {
-    const disputes = [
+    this.disputes = [
       {
         id: 1,
         store1: "Barra Bonita",
@@ -150,7 +155,7 @@ class DataManager {
   }
 
   createDefaultSales() {
-    const sales = [
+    this.sales = [
       {
         id: 1,
         product: "Açaí Frapp melgaçuda 1kg",
@@ -182,12 +187,12 @@ class DataManager {
         timestamp: new Date(Date.now() - 31 * 60000).toISOString(),
       },
     ];
-    localStorage.setItem("swift_sales", JSON.stringify(sales));
+    localStorage.setItem("swift_sales", JSON.stringify(this.sales));
   }
 
   login(email, password) {
-    const users = JSON.parse(localStorage.getItem("swift_users"));
-    const user = users.find(
+    this.users = JSON.parse(localStorage.getItem("swift_users"));
+    const user = this.users.find(
       (u) => u.email === email && u.password === password
     );
 
@@ -213,8 +218,8 @@ class DataManager {
   }
 
   updateMissionProgress(missionId, progress) {
-    const missions = this.getMissions();
-    const mission = missions.find((m) => m.id === missionId);
+    this.missions = this.getMissions();
+    const mission = this.missions.find((m) => m.id === missionId);
     if (mission) {
       mission.progress = progress;
       if (progress >= 100) {

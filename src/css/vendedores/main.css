@@ -269,6 +269,12 @@ body {
   padding: 30px;
 }
 
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 2px !important;
+  align-items: start !important;
+}
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
