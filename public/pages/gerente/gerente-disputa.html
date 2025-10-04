@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Disputas</title>
+    <link rel="stylesheet" href="../../../src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../../src/css/gerentes/gerente-disputa.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./gerente-dashboard.html" class="nav-link"
+                  ><i class="fas fa-chart-pie"></i
+                  ><span>Painel Gerente</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./ranking-regional.html" class="nav-link"
+                  ><i class="fas fa-chart-line"></i
+                  ><span>Ranking Regional</span></a
+                >
+              </li>
+              <li class="nav-item active">
+                <a href="./gerente-disputa.html" class="nav-link"
+                  ><i class="fas fa-code-compare"></i><span>Disputas</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-missao.html" class="nav-link"
+                  ><i class="fas fa-clipboard-list"></i
+                  ><span>Gestão de Missões</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gestao-vendas.html" class="nav-link"
+                  ><i class="fas fa-store"></i><span>Gestão de Vendas</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link"
+            ><i class="fas fa-cog"></i><span>Configurações</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="dashboard-header">
+          <div class="header-text">
+            <h1>Disputas</h1>
+            <p>Gerencie competições entre lojas</p>
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nova Disputa
+          </button>
+        </header>
+
+        <section class="dashboard-content">
+          <div class="disputes-grid">
+            <div class="card new-dispute-card">
+              <h3><i class="fas fa-plus-circle"></i> Nova Disputa</h3>
+              <form class="dispute-form">
+                <div class="form-group">
+                  <label for="store-select">Selecionar Loja</label>
+                  <select id="store-select">
+                    <option>Escolha uma loja</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type-select">Tipo da Disputa</label>
+                  <select id="type-select">
+                    <option>Vendas</option>
+                    <option>Cross-sell</option>
+                    <option>Ticket Médio</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Criar Disputa
+                </button>
+              </form>
+            </div>
+
+            <div class="card ongoing-disputes-card">
+              <h3><i class="fas fa-sync-alt"></i> Disputas em Andamento</h3>
+              <ul class="dispute-list">
+                <li class="dispute-item">
+                  <div class="dispute-info">
+                    <span class="store-name green">Barra Bonita</span>
+                    <span class="vs">vs</span>
+                    <span class="store-name red">Vila Olímpia</span>
+                    <span class="date-range">31/05/2024 - 07/06/2024</span>
+                  </div>
+                  <div class="dispute-actions">
+                    <span class="score">R$ 176.754,31</span>
+                    <button class="close-btn">&times;</button>
+                  </div>
+                </li>
+                <li class="dispute-item">
+                  <div class="dispute-info">
+                    <span class="store-name green">Centro</span>
+                    <span class="vs">vs</span>
+                    <span class="store-name red">Limeira</span>
+                    <span class="date-range">31/05/2024 - 07/06/2024</span>
+                  </div>
+                  <div class="dispute-actions">
+                    <span class="score">R$ 156.904,81</span>
+                    <button class="close-btn">&times;</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card finished-disputes-card">
+            <h3><i class="fas fa-flag-checkered"></i> Disputas Finalizadas</h3>
+            <ul class="dispute-list-finished">
+              <li class="dispute-item-finished">
+                <div class="dispute-teams">
+                  <span class="team-name">Interlagos</span>
+                  <span class="vs-light">vs Tatuapé</span>
+                  <span class="winner">Crescente</span>
+                </div>
+                <div class="dispute-status">
+                  <span class="date">07/06/2024</span>
+                  <span class="status-tag status-open">Aberta</span>
+                </div>
+              </li>
+              <li class="dispute-item-finished">
+                <div class="dispute-teams">
+                  <span class="team-name">Interlagos</span>
+                  <span class="vs-light">vs Tatuapé</span>
+                  <span class="winner">Finalizadas</span>
+                </div>
+                <div class="dispute-status">
+                  <span class="date">07/06/2024</span>
+                  <span class="status-tag status-closed">Fechada</span>
+                </div>
+              </li>
+              <li class="dispute-item-finished">
+                <div class="dispute-teams">
+                  <span class="team-name">Interlagos</span>
+                  <span class="vs-light">vs Tatuapé</span>
+                  <span class="winner">São Caetano</span>
+                </div>
+                <div class="dispute-status">
+                  <span class="date">07/06/2024</span>
+                  <span class="status-tag status-open">Aberta</span>
+                </div>
+              </li>
+              <li class="dispute-item-finished">
+                <div class="dispute-teams">
+                  <span class="team-name">Interlagos</span>
+                  <span class="vs-light">vs Tatuapé</span>
+                  <span class="winner">Diadema</span>
+                </div>
+                <div class="dispute-status">
+                  <span class="date">07/06/2024</span>
+                  <span class="status-tag status-closed">Fechada</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../../../src/js/data-manager.js" type="module"></script>
+    <script src="../../../src/js/navigation.js" type="module"></script>
+    <script src="../../../src/js/components/gerente/gerente-disputa.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Desafio FIAP</title>
+    <link rel="stylesheet" href="../../../src/css/vendedores/main.css" />
+    <link rel="stylesheet" href="../../../src/css/vendedores/dashboard.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item active">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fas fa-home"></i>
+                  <span>Início</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./goals.html" class="nav-link">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <span>Metas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./mission.html" class="nav-link">
+                  <i class="fas fa-tasks"></i>
+                  <span>Missões</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./competition.html" class="nav-link">
+                  <i class="fas fa-trophy"></i>
+                  <span>Disputa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left"></div>
+          <div class="header-right">
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+        </header>
+        <div class="content-area">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-header">
+                <div class="stat-title">Vendas</div>
+                <div class="stat-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+              </div>
+              <div class="stat-value">R$ 12.3k</div>
+              <div class="stat-subtitle">250 Items</div>
+              <div class="stat-change positive">+12%</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <div class="stat-title">Cross-sells</div>
+                <div class="stat-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+              <div class="stat-value">223</div>
+              <div class="stat-subtitle">vendas</div>
+              <div class="stat-change positive">+8%</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <div class="stat-title">Ticket Médio</div>
+                <div class="stat-icon">
+                  <i class="fas fa-receipt"></i>
+                </div>
+              </div>
+              <div class="stat-value">R$ 78,58</div>
+              <div class="stat-subtitle">350 pontos</div>
+              <div class="stat-change positive">+15%</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <div class="stat-title">Pontos</div>
+                <div class="stat-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+              </div>
+              <div class="stat-value">2.560</div>
+              <div class="stat-subtitle">Este mês</div>
+              <div class="stat-change positive">+23%</div>
+            </div>
+          </div>
+          <div class="chart-section">
+            <div class="chart-header">
+              <div class="chart-title">Título Do Gráfico</div>
+              <div class="chart-period">15 mai - 15 jun, 2025</div>
+              <div class="chart-toggle">Gráfico</div>
+            </div>
+            <div class="chart-stats">
+              <div class="chart-stat">
+                <div class="chart-stat-value">2.560 Pontos</div>
+              </div>
+              <div class="chart-stat">
+                <div class="chart-stat-value">123 Vendas</div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="salesChart"></canvas>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <div class="achievement-card">
+              <div class="achievement-title">REI DO FRANGO</div>
+              <div class="achievement-subtitle">ÚLTIMO TÍTULO</div>
+              <div class="achievement-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+            </div>
+
+            <div class="position-card">
+              <div class="position-header">POSIÇÃO</div>
+              <div class="position-item">
+                <span>Sua loja:</span>
+                <span>3º</span>
+              </div>
+              <div class="position-item">
+                <span>Região:</span>
+                <span>57º</span>
+              </div>
+              <div class="position-item">
+                <span>Cidade:</span>
+                <span>127º</span>
+              </div>
+            </div>
+
+            <div class="ticket-card">
+              <div class="ticket-header">TICKET MÉDIO</div>
+              <div class="ticket-value">R$ 78,58</div>
+              <div class="ticket-subtitle">350 pontos / Por venda</div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <div class="leaderboard">
+              <div class="section-header">
+                <h3>LEADERBOARD</h3>
+                <a href="#" class="show-all">Mostrar todos</a>
+              </div>
+              <div class="leaderboard-list">
+                <div class="leaderboard-item">
+                  <div class="rank">1</div>
+                  <div class="player-info">
+                    <div class="player-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="player-name">Vendedor</div>
+                  </div>
+                  <div class="points">35,000 pontos</div>
+                </div>
+                <div class="leaderboard-item">
+                  <div class="rank">2</div>
+                  <div class="player-info">
+                    <div class="player-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="player-name">Vendedor</div>
+                  </div>
+                  <div class="points">30,000 pontos</div>
+                </div>
+                <div class="leaderboard-item current-user">
+                  <div class="rank">3</div>
+                  <div class="player-info">
+                    <div class="player-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="player-name">Claudio Vinícius</div>
+                  </div>
+                  <div class="points">28,000 pontos</div>
+                </div>
+                <div class="leaderboard-item">
+                  <div class="rank">4</div>
+                  <div class="player-info">
+                    <div class="player-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="player-name">Vendedor</div>
+                  </div>
+                  <div class="points">26,000 pontos</div>
+                </div>
+                <div class="leaderboard-item">
+                  <div class="rank">5</div>
+                  <div class="player-info">
+                    <div class="player-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="player-name">Vendedor</div>
+                  </div>
+                  <div class="points">20,000 pontos</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="missions-today">
+              <div class="section-header">
+                <h3>Missões de Hoje</h3>
+                <a href="#" class="show-all">Mostrar todas</a>
+              </div>
+              <div class="missions-list">
+                <div class="mission-item">
+                  <div class="mission-info">
+                    <div class="mission-name">Limpar a Loja</div>
+                    <div class="mission-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67.7%"></div>
+                      </div>
+                      <span class="progress-text">67.7%</span>
+                    </div>
+                  </div>
+                  <div class="mission-points">200 pontos</div>
+                </div>
+                <div class="mission-item">
+                  <div class="mission-info">
+                    <div class="mission-name">Limpar os Freezers</div>
+                    <div class="mission-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67.7%"></div>
+                      </div>
+                      <span class="progress-text">67.7%</span>
+                    </div>
+                  </div>
+                  <div class="mission-points">200 pontos</div>
+                </div>
+                <div class="mission-item">
+                  <div class="mission-info">
+                    <div class="mission-name">Vender 10 frangos</div>
+                    <div class="mission-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 37.7%"></div>
+                      </div>
+                      <span class="progress-text">37.7%</span>
+                    </div>
+                  </div>
+                  <div class="mission-points">5000 pontos</div>
+                </div>
+                <div class="mission-item">
+                  <div class="mission-info">
+                    <div class="mission-name">Limpar a Loja</div>
+                    <div class="mission-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                      </div>
+                      <span class="progress-text">100%</span>
+                    </div>
+                  </div>
+                  <div class="mission-points">200 pontos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="summary-section">
+            <div class="summary-card">
+              <div class="summary-value">80</div>
+              <div class="summary-label">Missões Completadas</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-value">13</div>
+              <div class="summary-label">Medalhas</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../../../src/js/data-manager.js"></script>
+    <script
+      src="../../../src/js/components/vendedores/dashboard.js"
+      type="module"
+    ></script>
+  </body>
+</html>

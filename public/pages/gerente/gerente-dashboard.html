@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Painel do Gerente</title>
+    <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="../../../src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../../src/css/gerentes/gerente-dashboard.css"
+    />
+    <link rel="stylesheet" href="../../../src/css/navigation.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item active">
+                <a href="./gerente-dashboard.html" class="nav-link"
+                  ><i class="fas fa-cog"></i><span>Painel Gerente</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./ranking-regional.html" class="nav-link"
+                  ><i class="fas fa-chart-line"></i
+                  ><span>Ranking Regional</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-disputa.html" class="nav-link"
+                  ><i class="fas fa-code-compare"></i><span>Disputas</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-missao.html" class="nav-link"
+                  ><i class="fas fa-clipboard-list"></i
+                  ><span>Gestão de Missões</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gestao-vendas.html" class="nav-link"
+                  ><i class="fas fa-store"></i><span>Gestão de Vendas</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link"
+            ><i class="fas fa-cog"></i><span>Configurações</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="dashboard-header">
+          <div class="header-text">
+            <h1>Painel do Gerente</h1>
+            <p>Gerencie sua equipe e acompanhe resultados</p>
+          </div>
+          <div class="region-filter">
+            <span>Região Sul</span>
+          </div>
+        </header>
+
+        <section class="dashboard-content">
+          <div class="stats-container">
+            <div class="stat-item card">
+              <div class="stat-header">
+                <span>NPS</span> <i class="fas fa-arrow-trend-up"></i>
+              </div>
+              <div class="stat-body">
+                <h2 class="positive">80</h2>
+                <p class="positive">+12% em relação ao mês anterior</p>
+              </div>
+            </div>
+            <div class="stat-item card">
+              <div class="stat-header">
+                <span>Vendas Totais</span> <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="stat-body">
+                <h2>R$ 285.430,18</h2>
+                <p>Este mês</p>
+              </div>
+            </div>
+            <div class="stat-item card">
+              <div class="stat-header">
+                <span>Cross-sell</span> <i class="fas fa-bullseye-pointer"></i>
+              </div>
+              <div class="stat-body">
+                <h2>68.100 <span class="unit">vendidos</span></h2>
+                <p>Meta: 70.000</p>
+              </div>
+            </div>
+            <div class="stat-item card">
+              <div class="stat-header">
+                <span>Ticket Médio</span> <i class="fas fa-receipt"></i>
+              </div>
+              <div class="stat-body">
+                <h2>R$ 36.49</h2>
+                <p class="positive">+5% esta semana</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card sales-by-employee-card">
+            <h3><i class="fas fa-users"></i> Vendas por Funcionários</h3>
+            <ul class="employee-sales-list">
+              <li class="employee-item">
+                <div class="employee-info">
+                  <span class="initial-circle">A</span>
+                  <span class="employee-name">Antônio</span>
+                </div>
+                <div class="sales-data">
+                  <span class="sales-amount">R$ 98.300,00</span>
+                  <span class="sales-percentage">100%</span>
+                </div>
+              </li>
+              <li class="employee-item">
+                <div class="employee-info">
+                  <span class="initial-circle">C</span>
+                  <span class="employee-name">Carlos</span>
+                </div>
+                <div class="sales-data">
+                  <span class="sales-amount">R$ 87.600,00</span>
+                  <span class="sales-percentage">89%</span>
+                </div>
+              </li>
+              <li class="employee-item">
+                <div class="employee-info">
+                  <span class="initial-circle">M</span>
+                  <span class="employee-name">Mariana</span>
+                </div>
+                <div class="sales-data">
+                  <span class="sales-amount">R$ 76.200,00</span>
+                  <span class="sales-percentage">78%</span>
+                </div>
+              </li>
+              <li class="employee-item">
+                <div class="employee-info">
+                  <span class="initial-circle">F</span>
+                  <span class="employee-name">Fernanda</span>
+                </div>
+                <div class="sales-data">
+                  <span class="sales-amount">R$ 65.800,00</span>
+                  <span class="sales-percentage">67%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="actions-grid">
+            <a href="#" class="action-card">
+              <i class="fas fa-trophy icon-red"></i>
+              <h4>Criar Nova Disputa</h4>
+              <p>Configure uma nova competição entre lojas</p>
+            </a>
+            <a href="#" class="action-card">
+              <i class="fas fa-bullseye icon-red"></i>
+              <h4>Gerenciar Missões</h4>
+              <p>Adicionar e atribuir novas missões</p>
+            </a>
+            <a href="#" class="action-card">
+              <i class="fas fa-chart-line icon-red"></i>
+              <h4>Ranking Regional</h4>
+              <p>Ver performance de todas as lojas</p>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../../../src/js/data-manager.js"></script>
+    <script src="../../../src/js/navigation.js"></script>
+    <script
+      src="../../../src/js/components/gerente/gerente-dashboard.js"
+      type="module"
+    ></script>
+  </body>
+</html>

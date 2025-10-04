@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Desafio FIAP</title>
+    <link rel="stylesheet" href="../../../src/css/vendedores/main.css" />
+    <link rel="stylesheet" href="../../../src/css/vendedores/goals.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fas fa-home"></i>
+                  <span>Início</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="./goals.html" class="nav-link">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <span>Metas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./mission.html" class="nav-link">
+                  <i class="fas fa-tasks"></i>
+                  <span>Missões</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./competition.html" class="nav-link">
+                  <i class="fas fa-trophy"></i>
+                  <span>Disputa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left"></div>
+          <div class="header-right">
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-user"></i>
+          </div>
+        </header>
+
+        <div class="content-area">
+          <div class="page-header">
+            <h2>Metas</h2>
+            <p>Acompanhe suas metas e objetivos</p>
+          </div>
+
+          <div class="goals-grid">
+            <div class="goal-card monthly-goal" data-goal="monthly">
+              <div class="card-background-effect"></div>
+              <div class="card-header">
+                <div class="goal-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                  <div class="icon-pulse"></div>
+                </div>
+                <div class="goal-title">Meta Mensal</div>
+                <div class="goal-actions">
+                  <button class="action-btn" title="Detalhes">
+                    <i class="fas fa-info-circle"></i>
+                  </button>
+                  <button class="action-btn" title="Editar">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="goal-value">
+                <div class="current-value">R$ 12.250</div>
+                <div class="target-info">de R$ 25.000 • Vendas este mês</div>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-header">
+                  <span class="progress-label">Progresso</span>
+                  <span class="progress-percentage">49%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-progress="49"></div>
+                  <div class="progress-glow"></div>
+                </div>
+              </div>
+
+              <div class="goal-status">
+                <div class="status-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <span class="status-text">49% concluído</span>
+              </div>
+
+              <div class="card-shine"></div>
+            </div>
+
+            <div class="goal-card points-goal" data-goal="points">
+              <div class="card-background-effect"></div>
+              <div class="card-header">
+                <div class="goal-icon">
+                  <i class="fas fa-star"></i>
+                  <div class="icon-pulse"></div>
+                </div>
+                <div class="goal-title">Meta de Pontos</div>
+                <div class="goal-actions">
+                  <button class="action-btn" title="Detalhes">
+                    <i class="fas fa-info-circle"></i>
+                  </button>
+                  <button class="action-btn" title="Editar">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="goal-value">
+                <div class="current-value">pts 2.550</div>
+                <div class="target-info">de pts 5.000 • Pontos este mês</div>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-header">
+                  <span class="progress-label">Progresso</span>
+                  <span class="progress-percentage">51%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-progress="51"></div>
+                  <div class="progress-glow"></div>
+                </div>
+              </div>
+
+              <div class="goal-status">
+                <div class="status-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <span class="status-text">51% concluído</span>
+              </div>
+
+              <div class="card-shine"></div>
+            </div>
+
+            <div
+              class="goal-card crosssell-goal completed"
+              data-goal="crosssell"
+            >
+              <div class="card-background-effect"></div>
+              <div class="card-header">
+                <div class="goal-icon">
+                  <i class="fas fa-chart-bar"></i>
+                  <div class="icon-pulse"></div>
+                </div>
+                <div class="goal-title">Meta Cross-sell</div>
+                <div class="goal-actions">
+                  <button class="action-btn" title="Detalhes">
+                    <i class="fas fa-info-circle"></i>
+                  </button>
+                  <button class="action-btn" title="Editar">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="goal-value">
+                <div class="current-value">vendas 222</div>
+                <div class="target-info">
+                  de vendas 300 • Cross-sells este mês
+                </div>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-header">
+                  <span class="progress-label">Progresso</span>
+                  <span class="progress-percentage">100%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill completed"
+                    data-progress="100"
+                  ></div>
+                  <div class="progress-glow"></div>
+                </div>
+              </div>
+
+              <div class="goal-status">
+                <div class="status-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="status-text">100% concluído</span>
+              </div>
+
+              <div class="card-shine"></div>
+              <div class="achievement-badge">
+                <i class="fas fa-trophy"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="goals-summary">
+            <div class="summary-card">
+              <div class="summary-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div class="summary-content">
+                <div class="summary-title">Progresso Geral</div>
+                <div class="summary-value">58%</div>
+                <div class="summary-subtitle">das metas concluídas</div>
+              </div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="summary-content">
+                <div class="summary-title">Dias Restantes</div>
+                <div class="summary-value">12</div>
+                <div class="summary-subtitle">para o fim do mês</div>
+              </div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-icon">
+                <i class="fas fa-trending-up"></i>
+              </div>
+              <div class="summary-content">
+                <div class="summary-title">Tendência</div>
+                <div class="summary-value">+15%</div>
+                <div class="summary-subtitle">vs mês anterior</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="goalModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Detalhes da Meta</h3>
+          <button class="modal-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+    <script src="../../../src/js/data-manager.js"></script>
+    '
+    <script
+      src="../../../src/js/components/vendedores/goals.js"
+      type="module"
+    ></script>
+  </body>
+</html>

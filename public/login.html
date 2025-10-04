@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Login</title>
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <link rel="stylesheet" href="../src/css/login.css" />
+    <link rel="stylesheet" href="../src/css/navigation.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="login-logo">
+          <div class="logo-icon">S</div>
+          <span class="logo-text">Swift</span>
+        </div>
+
+        <h2>Acesse sua conta</h2>
+        <p class="subtitle">Selecione seu perfil para continuar</p>
+
+        <div class="role-selector">
+          <button id="btnVendedor" class="role-btn">
+            <i class="fas fa-user-tie"></i> Vendedor
+          </button>
+          <button id="btnGerente" class="role-btn">
+            <i class="fas fa-user-cog"></i> Gerente
+          </button>
+        </div>
+
+        <form id="loginForm" class="login-form hidden">
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="E-mail" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" required />
+          </div>
+
+          <div class="login-options">
+            <label class="remember-me">
+              <input type="checkbox" />
+              Lembrar de mim
+            </label>
+            <a href="#" class="forgot-password">Esqueci minha senha</a>
+          </div>
+
+          <button type="submit" class="login-btn">Entrar</button>
+        </form>
+
+        <p class="login-footer">
+          Não tem uma conta? <a href="#">Fale com o administrador</a>
+        </p>
+      </div>
+    </div>
+    <script src="../src/js/data-manager.js"></script>
+    <script src="../src/js/navigation.js"></script>
+    <script src="../src/js/components/login.js"></script>
+  </body>
+</html>

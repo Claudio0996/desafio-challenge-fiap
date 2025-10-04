@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Ranking Regional</title>
+    <link rel="stylesheet" href="../../../src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../../src/css/gerentes/ranking-regional.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./gerente-dashboard.html" class="nav-link"
+                  ><i class="fas fa-chart-pie"></i
+                  ><span>Painel Gerente</span></a
+                >
+              </li>
+              <li class="nav-item active">
+                <a href="./ranking-regional.html" class="nav-link"
+                  ><i class="fas fa-chart-line"></i
+                  ><span>Ranking Regional</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-disputa.html" class="nav-link"
+                  ><i class="fas fa-code-compare"></i><span>Disputas</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-missao.html" class="nav-link"
+                  ><i class="fas fa-clipboard-list"></i
+                  ><span>Gestão de Missões</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./gestao-vendas.html" class="nav-link"
+                  ><i class="fas fa-store"></i><span>Gestão de Vendas</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link"
+            ><i class="fas fa-cog"></i><span>Configurações</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="dashboard-header">
+          <div class="header-text">
+            <h1>Ranking Regional</h1>
+            <p>Performance das lojas da região</p>
+          </div>
+          <div class="date-filter">
+            <span>Maio, 2024</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </header>
+
+        <section class="dashboard-content">
+          <div class="card leaderboard-card">
+            <h3><i class="fas fa-map-marker-alt"></i> LEADERBOARD</h3>
+            <div class="map-container">
+              <div class="map-placeholder">
+                <i class="fas fa-location-dot"></i>
+                <h4>Mapa do Brasil</h4>
+                <p>Visualização de performance por região</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-grid">
+            <div class="card billing-card">
+              <h3>Faturamento</h3>
+              <ul class="billing-list">
+                <li class="billing-item total-billing">
+                  <span class="label">R$ 2.347</span>
+                  <span class="value main-value">5.632.304 pontos</span>
+                </li>
+                <li class="billing-item">
+                  <div class="label-group">
+                    <span class="label">Cross-sell</span>
+                    <span class="sub-label">50.500 vendidos</span>
+                    <span class="sub-label">Meta: 60.000</span>
+                  </div>
+                  <div class="value-group">
+                    <span class="value">total</span>
+                    <span class="percentage">84%</span>
+                  </div>
+                </li>
+                <li class="billing-item">
+                  <div class="label-group">
+                    <span class="label">Vendas</span>
+                    <span class="sub-label">R$ 223.546,08</span>
+                    <span class="sub-label">Meta: 250.000</span>
+                  </div>
+                  <div class="value-group">
+                    <span class="value">total</span>
+                    <span class="percentage">89%</span>
+                  </div>
+                </li>
+                <li class="billing-item">
+                  <div class="label-group">
+                    <span class="label">Ticket Médio</span>
+                    <span class="sub-label">R$ 78,58</span>
+                  </div>
+                  <div class="value-group">
+                    <span class="value">210 vendas</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card ranking-card">
+              <h3><i class="fas fa-award"></i> Ranking de Vendedores</h3>
+              <ul class="ranking-list">
+                <li class="ranking-item">
+                  <span class="rank-icon rank-1">🏆</span>
+                  <div class="seller-info">
+                    <span class="seller-name">Vendedor</span>
+                    <span class="seller-position">Posição #1</span>
+                  </div>
+                  <span class="seller-points">2.081 pontos</span>
+                </li>
+                <li class="ranking-item">
+                  <span class="rank-icon rank-2">🥈</span>
+                  <div class="seller-info">
+                    <span class="seller-name">Vendedor</span>
+                    <span class="seller-position">Posição #2</span>
+                  </div>
+                  <span class="seller-points">1.981 pontos</span>
+                </li>
+                <li class="ranking-item">
+                  <span class="rank-icon rank-3">🥉</span>
+                  <div class="seller-info">
+                    <span class="seller-name">Vendedor</span>
+                    <span class="seller-position">Posição #3</span>
+                  </div>
+                  <span class="seller-points">1.881 pontos</span>
+                </li>
+                <li class="ranking-item">
+                  <span class="rank-icon rank-4">4</span>
+                  <div class="seller-info">
+                    <span class="seller-name">Vendedor</span>
+                    <span class="seller-position">Posição #4</span>
+                  </div>
+                  <span class="seller-points">1.781 pontos</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../../../src/js/data-manager.js" type="module"></script>
+    <script src="../../../src/js/navigation.js" type="module"></script>
+    <script
+      src="../../../src/js/components/gerente/ranking-regional.js"
+      type="module"
+    ></script>
+  </body>
+</html>

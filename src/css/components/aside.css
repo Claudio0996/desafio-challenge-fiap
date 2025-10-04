@@ -1,0 +1,79 @@
+:root {
+  --background: #1a1a1a;
+  --text-color: #a1a1aa;
+  --sidebar-accent-foreground: #f4f4f5;
+  --sidebar-active: #ffffff55;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.sidebar {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 256px;
+  gap: 0.5rem;
+}
+
+.divider {
+  color: var(--text-color);
+}
+
+.logo-img {
+  width: 90px;
+  padding: 1.25rem 1.75rem;
+}
+
+.user-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1.25rem 1.75rem;
+}
+
+.logos {
+  width: 20px;
+}
+
+.user-info_text {
+  color: var(--sidebar-accent-foreground);
+}
+
+.user-info_text h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.user-info_text p {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--text-color);
+}
+.options-list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.options {
+  border-radius: 10px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+.options:hover {
+  background-color: var(--sidebar-active);
+}
+
+.options a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--sidebar-accent-foreground);
+  font-size: 14px;
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Painel do Gerente</title>
+    <link rel="stylesheet" href="../../src/css/main.css" />
+    <link rel="stylesheet" href="../../src/css/manager.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <div class="nav-section-title">Vendedor</div>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">
+                  <i class="fas fa-home"></i>
+                  <span>Início</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./goals.html" class="nav-link">
+                  <i class="fas fa-target"></i>
+                  <span>Metas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./mission.html" class="nav-link">
+                  <i class="fas fa-tasks"></i>
+                  <span>Missões</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./competition.html" class="nav-link">
+                  <i class="fas fa-trophy"></i>
+                  <span>Disputa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-section-title">Gerente</div>
+            <ul class="nav-list">
+              <li class="nav-item active">
+                <a href="./manager.html" class="nav-link">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>Painel Gerente</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Ranking Regional</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <span>Disputas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-cog"></i>
+                  <span>Gestão de Missões</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Gestão de Vendas</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <div class="greeting">
+              <div class="greeting-icon">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="greeting-text">
+                <h1>Olá, Claudio</h1>
+                <p>3ª Posição</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-right">
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-user"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-th"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="content-area">
+          <div class="breadcrumb">
+            <div class="breadcrumb-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-current">Painel Gerente</span>
+          </div>
+
+          <div class="page-header">
+            <h2>Painel do Gerente</h2>
+            <p>Gerencie sua equipe e acompanhe resultados</p>
+          </div>
+
+          <div class="manager-metrics-grid">
+            <div class="metric-card nps-card" data-tooltip-title="Net Promoter Score" data-tooltip-content="Mede a lealdade do cliente. Baseado em pesquisas de satisfação.">
+              <div class="card-header">
+                <div class="metric-title">NPS</div>
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="metric-value">80</div>
+              <div class="metric-trend">+12% em relação ao mês anterior</div>
+            </div>
+
+            <div class="metric-card sales-card" data-tooltip-title="Vendas Totais" data-tooltip-content="Valor total de vendas realizadas no período.">
+              <div class="card-header">
+                <div class="metric-title">Vendas Totais</div>
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="metric-value">R$ 285.430,18</div>
+              <div class="metric-trend">Este mês</div>
+            </div>
+
+            <div class="metric-card crosssell-card" data-tooltip-title="Cross-sell" data-tooltip-content="Número de vendas adicionais realizadas a clientes existentes.">
+              <div class="card-header">
+                <div class="metric-title">Cross-sell</div>
+                <i class="fas fa-tags"></i>
+              </div>
+              <div class="metric-value">68.100 <small>vendidos</small></div>
+              <div class="metric-trend">Meta: 70.000</div>
+            </div>
+
+            <div class="metric-card ticket-card" data-tooltip-title="Ticket Médio" data-tooltip-content="Valor médio de cada venda realizada.">
+              <div class="card-header">
+                <div class="metric-title">Ticket Médio</div>
+                <i class="fas fa-receipt"></i>
+              </div>
+              <div class="metric-value">R$ 36.49</div>
+              <div class="metric-trend">+5% esta semana</div>
+            </div>
+          </div>
+
+          <div class="sales-by-employee-section">
+            <h3>Vendas por Funcionários</h3>
+            <div class="employee-list">
+              <div class="employee-card" data-employee-id="antonio">
+                <div class="employee-avatar">A</div>
+                <div class="employee-details">
+                  <div class="employee-name">Antônio</div>
+                  <div class="employee-progress-bar">
+                    <div class="employee-progress-fill" style="width: 100%;"></div>
+                  </div>
+                </div>
+                <div class="employee-sales">
+                  <div class="sales-value">R$ 98.300,00</div>
+                  <div class="sales-percentage">100%</div>
+                </div>
+              </div>
+              <div class="employee-card" data-employee-id="carlos">
+                <div class="employee-avatar">C</div>
+                <div class="employee-details">
+                  <div class="employee-name">Carlos</div>
+                  <div class="employee-progress-bar">
+                    <div class="employee-progress-fill" style="width: 89%;"></div>
+                  </div>
+                </div>
+                <div class="employee-sales">
+                  <div class="sales-value">R$ 87.600,00</div>
+                  <div class="sales-percentage">89%</div>
+                </div>
+              </div>
+              <div class="employee-card" data-employee-id="mariana">
+                <div class="employee-avatar">M</div>
+                <div class="employee-details">
+                  <div class="employee-name">Mariana</div>
+                  <div class="employee-progress-bar">
+                    <div class="employee-progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+                <div class="employee-sales">
+                  <div class="sales-value">R$ 76.200,00</div>
+                  <div class="sales-percentage">78%</div>
+                </div>
+              </div>
+              <div class="employee-card" data-employee-id="fernanda">
+                <div class="employee-avatar">F</div>
+                <div class="employee-details">
+                  <div class="employee-name">Fernanda</div>
+                  <div class="employee-progress-bar">
+                    <div class="employee-progress-fill" style="width: 67%;"></div>
+                  </div>
+                </div>
+                <div class="employee-sales">
+                  <div class="sales-value">R$ 65.800,00</div>
+                  <div class="sales-percentage">67%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="manager-actions-grid">
+            <div class="action-card" data-action="new-competition">
+              <i class="fas fa-trophy"></i>
+              <h3>Criar Nova Disputa</h3>
+              <p>Configure uma nova competição entre lojas</p>
+            </div>
+            <div class="action-card" data-action="manage-missions">
+              <i class="fas fa-tasks"></i>
+              <h3>Gerenciar Missões</h3>
+              <p>Adicionar e atribuir novas missões</p>
+            </div>
+            <div class="action-card" data-action="regional-ranking">
+              <i class="fas fa-chart-line"></i>
+              <h3>Ranking Regional</h3>
+              <p>Ver performance de todas as lojas</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+    <div id="global-tooltip" class="tooltip"></div>
+
+    <script src="../../src/js/components/manager.js" type="module"></script>
+  </body>
+</html>

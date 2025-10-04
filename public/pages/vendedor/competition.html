@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Desafio FIAP</title>
+    <link rel="stylesheet" href="../../../src/css/vendedores/main.css" />
+    <link rel="stylesheet" href="../../../src/css/vendedores/competition.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./dashboard.html" class="nav-link">
+                  <i class="fas fa-home"></i>
+                  <span>Início</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./goals.html" class="nav-link">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <span>Metas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./mission.html" class="nav-link">
+                  <i class="fas fa-tasks"></i>
+                  <span>Missões</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="./competition.html" class="nav-link">
+                  <i class="fas fa-trophy"></i>
+                  <span>Disputa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left"></div>
+          <div class="header-right">
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="content-area">
+          <div class="page-header">
+            <h2>Disputa</h2>
+            <p>Compare seu desempenho com outras lojas</p>
+          </div>
+
+          <div class="performance-grid">
+            <div class="performance-card my-store">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Minha Loja</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="myStoreChart"></canvas>
+              </div>
+              <div class="performance-stats">
+                <div class="performance-value">23,3%</div>
+                <div class="performance-label">Performance</div>
+              </div>
+              <div class="card-glow"></div>
+            </div>
+
+            <div class="performance-card competitor-store">
+              <div class="card-header">
+                <div class="card-icon competitor">
+                  <i class="fas fa-times"></i>
+                </div>
+                <h3>Loja Adversária</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="competitorChart"></canvas>
+              </div>
+              <div class="performance-stats">
+                <div class="performance-value">67,7%</div>
+                <div class="performance-label">Performance</div>
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+
+          <div class="vs-comparison">
+            <div class="vs-container">
+              <div class="vs-left">
+                <div class="vs-percentage">23,3%</div>
+                <div class="vs-label">Minha Loja</div>
+              </div>
+              <div class="vs-center">
+                <div class="vs-text">VS</div>
+                <div class="vs-animation">
+                  <div class="pulse-ring"></div>
+                  <div class="pulse-ring delay-1"></div>
+                  <div class="pulse-ring delay-2"></div>
+                </div>
+              </div>
+              <div class="vs-right">
+                <div class="vs-percentage">67,7%</div>
+                <div class="vs-label">Loja Adversária</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-sales-card">
+            <div class="card-header">
+              <h3>Vendas por Categoria</h3>
+              <div class="card-actions">
+                <button class="action-btn" title="Atualizar dados">
+                  <i class="fas fa-sync-alt"></i>
+                </button>
+                <button class="action-btn" title="Exportar dados">
+                  <i class="fas fa-download"></i>
+                </button>
+              </div>
+            </div>
+            <div class="category-content">
+              <div class="donut-chart-container">
+                <canvas id="categoryChart"></canvas>
+                <div class="chart-center-info">
+                  <div class="total-sales">100%</div>
+                  <div class="total-label">Total</div>
+                </div>
+              </div>
+              <div class="category-legend">
+                <div class="legend-item" data-category="frangos">
+                  <div
+                    class="legend-color"
+                    style="background-color: #dc2626"
+                  ></div>
+                  <div class="legend-info">
+                    <div class="legend-name">Frangos</div>
+                    <div class="legend-percentage">45%</div>
+                  </div>
+                  <div class="legend-trend up">
+                    <i class="fas fa-arrow-up"></i>
+                  </div>
+                </div>
+                <div class="legend-item" data-category="bovinos">
+                  <div
+                    class="legend-color"
+                    style="background-color: #b91c1c"
+                  ></div>
+                  <div class="legend-info">
+                    <div class="legend-name">Bovinos</div>
+                    <div class="legend-percentage">15%</div>
+                  </div>
+                  <div class="legend-trend down">
+                    <i class="fas fa-arrow-down"></i>
+                  </div>
+                </div>
+                <div class="legend-item" data-category="legumes">
+                  <div
+                    class="legend-color"
+                    style="background-color: #16a34a"
+                  ></div>
+                  <div class="legend-info">
+                    <div class="legend-name">Legumes</div>
+                    <div class="legend-percentage">35%</div>
+                  </div>
+                  <div class="legend-trend up">
+                    <i class="fas fa-arrow-up"></i>
+                  </div>
+                </div>
+                <div class="legend-item" data-category="suinos">
+                  <div
+                    class="legend-color"
+                    style="background-color: #7c3aed"
+                  ></div>
+                  <div class="legend-info">
+                    <div class="legend-name">Suínos</div>
+                    <div class="legend-percentage">10%</div>
+                  </div>
+                  <div class="legend-trend neutral">
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </div>
+                <div class="legend-item" data-category="tempero">
+                  <div
+                    class="legend-color"
+                    style="background-color: #f59e0b"
+                  ></div>
+                  <div class="legend-info">
+                    <div class="legend-name">Tempero</div>
+                    <div class="legend-percentage">5%</div>
+                  </div>
+                  <div class="legend-trend up">
+                    <i class="fas fa-arrow-up"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script
+      src="../../../src/js/components/vendedores/competition.js"
+      type="module"
+    ></script>
+  </body>
+</html>

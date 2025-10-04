@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift - Desafio FIAP</title>
+    <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="../../../src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../../src/css/gerentes/gerente-missao.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Swift</span>
+          </div>
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+              <div class="user-name">Claudio Vinícius</div>
+              <div class="user-position">3ª Posição</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./gerente-dashboard.html" class="nav-link">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>Painel Gerente</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./ranking-regional.html" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Ranking Regional</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-disputa.html" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <span>Disputas</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./gerente-missao.html" class="nav-link">
+                  <i class="fas fa-cog"></i>
+                  <span>Gestão de Missões</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./gestao-vendas.html" class="nav-link">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Gestão de Vendas</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#" class="settings-link">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left">
+            <div class="greeting">
+              <div class="greeting-text">
+                <h1>Olá, Claudio</h1>
+                <p>3ª Posição</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-right">
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-user"></i>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-th"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="content-area">
+          <div class="page-header">
+            <h2>Gerenciar Missões</h2>
+            <p>Crie e atribua missões para sua equipe</p>
+          </div>
+
+          <div class="missions-grid">
+            <div class="add-mission-card">
+              <div class="mission-header">
+                <span
+                  class="mission-icon"
+                  style="background: #ef4444; color: #fff"
+                >
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="mission-title">Adicionar Missão</span>
+              </div>
+              <form>
+                <div>
+                  <label class="form-label" for="tituloMissao"
+                    >Título da Missão *</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tituloMissao"
+                    placeholder="Ex: Vender 10 produtos premium"
+                  />
+                </div>
+                <div>
+                  <label for="descMissao" class="form-label">Descrição *</label>
+                  <textarea
+                    class="form-control"
+                    id="descMissao"
+                    rows="2"
+                    placeholder="Descreva os detalhes da missão..."
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="pontosMissao" class="form-label">Pontos *</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="pontosMissao"
+                    value="100"
+                  />
+                </div>
+                <button type="submit" class="btn-primary w-100 mt-2">
+                  Criar Missão
+                </button>
+              </form>
+            </div>
+
+            <div class="add-employee-card">
+              <div class="mission-header">
+                <span
+                  class="mission-icon"
+                  style="background: #3b82f6; color: #fff"
+                >
+                  <i class="fas fa-user"></i>
+                </span>
+                <span class="mission-title">Atribuir a Funcionário</span>
+              </div>
+              <div>
+                <label for="buscarFunc" class="form-label"
+                  >Buscar Funcionário</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="buscarFunc"
+                  placeholder="Digite o nome do funcionário..."
+                />
+              </div>
+              <div>
+                <label for="selectFunc" class="form-label"
+                  >Selecionar Funcionário</label
+                >
+                <select class="form-select" id="selectFunc">
+                  <option>Escolha um funcionário</option>
+                </select>
+              </div>
+              <button type="button" class="btn-primary w-100 mt-2" disabled>
+                Atribuir Última Missão
+              </button>
+            </div>
+            <div class="missions-progress-card">
+              <div class="mission-header">
+                <span class="mission-icon">
+                  <i class="fas fa-hourglass-half"></i>
+                </span>
+                <span class="mission-title"
+                  >Missões em Andamento <span class="badge">2</span></span
+                >
+              </div>
+
+              <div class="mission-item">
+                <div class="mission-item-header">
+                  <span class="mission-item-title"
+                    >Vender 10 produtos premium</span
+                  >
+                  <span class="badge">100 pts</span>
+                </div>
+                <p class="progress-title">Progresso</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+                <div class="progress-info">
+                  <div class="progress-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>14/01/2024</span>
+                  </div>
+                  <div class="progress-assignee">
+                    <i class="fas fa-user"></i>
+                    <span>João Silva</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mission-item">
+                <div class="mission-item-header">
+                  <span class="mission-item-title"
+                    >Conseguir 5 cross-sells</span
+                  >
+                  <span class="badge">75 pts</span>
+                </div>
+                <p class="progress-title">Progresso</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <div class="progress-info">
+                  <div class="progress-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>19/01/2024</span>
+                  </div>
+                  <div class="progress-assignee">
+                    <i class="fas fa-user"></i>
+                    <span>Maria Santos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="missions-completed-card">
+              <div class="mission-header">
+                <span class="mission-icon text-success">
+                  <i class="fas fa-check-circle"></i>
+                </span>
+                <span class="mission-title">Missões Concluídas</span>
+              </div>
+              <div class="chart-container">
+                <svg class="chart-svg" id="missionsChart"></svg>
+                <div class="chart-tooltip" id="tooltip"></div>
+              </div>
+              <div class="summary-stats">
+                <div class="stat-item">
+                  <span class="stat-value">112</span>
+                  <span class="stat-label">Concluídas</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">31</span>
+                  <span class="stat-label">Pendentes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="missions-list-header">
+            <h3>Todas as Missões</h3>
+          </div>
+          <div class="missions-list"></div>
+        </div>
+      </main>
+    </div>
+    <script src="../../../src/js/data-manager.js"></script>
+    <script src="../../../src/js/navigation.js"></script>
+    <script src="../../../src/js/components/script.js"></script>
+    <script src="../../../src/js/components/gerente/gerente-missao.js"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+.manager-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metric-card {
+  background-color: var(--neutral-gray-800);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--neutral-gray-700);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.metric-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.metric-card .metric-title {
+  font-size: 16px;
+  color: var(--neutral-gray-400);
+  font-weight: 500;
+}
+
+.metric-card .card-header i {
+  font-size: 20px;
+  color: var(--primary-red);
+}
+
+.metric-card .metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.metric-card .metric-value small {
+  font-size: 18px;
+  color: var(--neutral-gray-400);
+}
+
+.metric-card .metric-trend {
+  font-size: 14px;
+  color: var(--neutral-gray-500);
+}
+
+.nps-card .metric-trend {
+  color: var(--success-green);
+}
+
+.ticket-card .metric-trend {
+  color: var(--success-green);
+}
+
+.sales-by-employee-section {
+  margin-bottom: 30px;
+}
+
+.sales-by-employee-section h3 {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.employee-card {
+  background-color: var(--neutral-gray-800);
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--neutral-gray-700);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.employee-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.employee-details {
+  flex: 1;
+}
+
+.employee-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.employee-progress-bar {
+  height: 6px;
+  background-color: var(--neutral-gray-700);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.employee-progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--primary-red-light), var(--primary-red));
+  border-radius: 3px;
+  transition: width 0.5s ease-out;
+}
+
+.employee-sales {
+  text-align: right;
+}
+
+.sales-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.sales-percentage {
+  font-size: 13px;
+  color: var(--neutral-gray-500);
+}
+
+.manager-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.action-card {
+  background-color: var(--neutral-gray-800);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--neutral-gray-700);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background-color: var(--neutral-gray-700);
+}
+
+.action-card i {
+  font-size: 40px;
+  color: var(--primary-red);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover i {
+  transform: scale(1.1);
+}
+
+.action-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  font-size: 14px;
+  color: var(--neutral-gray-400);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .manager-metrics-grid,
+  .employee-list,
+  .manager-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card,
+  .employee-card,
+  .action-card {
+    padding: 20px;
+  }
+
+  .metric-card .metric-value {
+    font-size: 28px;
+  }
+
+  .action-card i {
+    font-size: 35px;
+  }
+
+  .action-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-card .metric-value {
+    font-size: 24px;
+  }
+
+  .metric-card .metric-trend {
+    font-size: 13px;
+  }
+
+  .employee-name {
+    font-size: 15px;
+  }
+
+  .sales-value {
+    font-size: 15px;
+  }
+
+  .sales-percentage {
+    font-size: 12px;
+  }
+
+  .action-card i {
+    font-size: 30px;
+  }
+
+  .action-card h3 {
+    font-size: 15px;
+  }
+}
+
